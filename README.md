@@ -13,7 +13,11 @@ You’ll need Google Ads API access:
 - OAuth client_id / client_secret / refresh_token
 - Login customer ID (and optional customer ID)
 
-See `references/google_ads_setup.md` for exact fields and setup notes.
+**Where to put config:**
+- Prefer **env vars** (local only), or
+- A **local JSON file** you pass at runtime
+
+See `references/google_ads_setup.md` for exact fields + examples.
 
 ## Business profile
 Campaign builds use a business profile file (or Q&A prompt). Schema is in:
