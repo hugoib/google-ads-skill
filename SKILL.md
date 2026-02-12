@@ -96,20 +96,103 @@ User approval → book campaign directly.
 - Cost per Order (CpO): [Z]€
 - Customer journey duration: [D] days
 
-### Experiments & Outcomes
-- Experiment A: [result + decision]
-- Experiment B: [result + decision]
-- Experiment C: [result + decision]
+### Hypothesis Results
+| Experiment | Hypothesis | Result | Verdict |
+|------------|------------|--------|---------|
+| A | [description] | CpO: [X]€ | ✅ Scale / ❌ Kill / 🔄 Iterate |
 
-### Decisions (Next Actions)
-- Kill: [experiment]
-- Scale: [experiment]
-- Iterate: [experiment]
+### What We Learned
+- [Insight 1]
+- [Insight 2]
 
-### New Hypotheses for Next Week
-- [Hypothesis 1]
-- [Hypothesis 2]
+### Next Week's Experiments
+Based on learnings, propose 2–3 new experiments.
+
+Approve new experiments? (yes/no/discuss)
+
+### Customer Journey Analysis
+After first conversions, analyze and report:
+- **Time from first click to conversion** (from Analytics data)
+- **Touchpoints before conversion** (search → ad → landing page → convert)
+- **Implication for budget timing:** “Conversions happen ~[X] days after click, so allocate budget for [X+2] day measurement window”
 ```
+
+### No Automatic Adjustments
+**Rule:** Agent does NOT automatically change budgets or bids.
+
+Workflow:
+1) Measure → 2) Learn → 3) Report → 4) Propose new hypotheses → 5) User approves → 6) Execute
+
+## Phase 4: ROI Measurement
+
+### Primary Metric: Cost per Order (CpO)
+CpO = Total Spend / Number of Orders
+
+Target: CpO < Customer Lifetime Value × Profit Margin
+
+### Secondary Metrics (for diagnostics)
+| Metric | Use For |
+|--------|---------|
+| CTR | Ad relevance (low CTR → test copy) |
+| CPC | Competition level (high CPC → test long‑tail) |
+| Conversion Rate | Landing page effectiveness |
+| Quality Score | Keyword‑ad relevance |
+
+### Break‑Even Calculation
+Ask user: “What's a customer worth to you?” → Set CpO target at **50–70%** of that value for safety margin.
+
+## Safety Rules
+1) Never store credentials in repo — use env vars or local JSON only
+2) Always confirm before booking campaigns, even small ones
+3) Never exceed stated experiment budget without explicit approval
+4) If API access fails — ask for credentials, don't guess
+5) If data is insufficient — say so, don't fabricate insights
+
+## Quick Reference
+| Phase | Trigger | Action |
+|-------|---------|--------|
+| Discovery | User starts conversation | Ask 3–5 Socratic questions |
+| Proposal | User ready to proceed | Present experiments, get approval |
+| Execution | User approves | Book campaign, start 7‑day clock |
+| Review | Every 7 days (proactive) | Generate report, propose next experiments |
+
+## Common Mistakes
+| Mistake | Fix |
+|---------|-----|
+| Testing multiple variables at once | Enforce ONE change per experiment |
+| Skipping discovery questions | Always complete 3–5 questions minimum |
+| Adjusting mid‑week | Let experiments run full 7 days |
+| Ignoring customer journey timing | Analyze duration, adjust measurement window |
+| Focusing on CTR instead of CpO | CTR is diagnostic, CpO is the goal |
+
+## Example Dialogue
+User: “I want to run Google Ads for my color analysis app.”
+
+Agent (Discovery):
+1) “What does each conversion earn you? Is it a one‑time purchase or subscription?”
+2) “Who’s your ideal customer? Describe them.”
+3) “Why do they choose your app over alternatives like personal color consultants?”
+4) “What’s your comfortable budget to learn what works?”
+5) “Have you run ads before?”
+
+User: [answers]
+
+Agent: “I have enough to propose initial experiments. We can proceed now, or I can ask 3 more questions to refine. What do you prefer?”
+
+---
+
+User: “Proceed.”
+
+Agent: [Presents 2–3 experiment proposals with 30€ budget each, asks for approval]
+
+User: “Yes, book them.”
+
+Agent: [Books campaigns, sets 7‑day reminder]
+
+---
+
+[7 days later, proactive morning report]
+Agent: “Here’s your Week 1 performance report...”
 
 ## Resources
 - API credentials & setup: `references/google_ads_setup.md`
