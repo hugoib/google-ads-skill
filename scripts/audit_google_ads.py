@@ -29,27 +29,18 @@ config = {
 client = GoogleAdsClient.load_from_dict(config)
 customer_id = os.getenv('GOOGLE_ADS_CUSTOMER_ID').replace('-', '')
 
-query = (
-    "SELECT
-"
-    "  segments.date,
-"
-    "  metrics.impressions,
-"
-    "  metrics.clicks,
-"
-    "  metrics.ctr,
-"
-    "  metrics.cost_micros,
-"
-    "  metrics.conversions,
-"
-    "  metrics.conversions_value
-"
-    "FROM customer
-"
-    "WHERE segments.date DURING LAST_30_DAYS"
-)
+query = """
+SELECT
+  segments.date,
+  metrics.impressions,
+  metrics.clicks,
+  metrics.ctr,
+  metrics.cost_micros,
+  metrics.conversions,
+  metrics.conversions_value
+FROM customer
+WHERE segments.date DURING LAST_30_DAYS
+"""
 
 ga_service = client.get_service('GoogleAdsService')
 
