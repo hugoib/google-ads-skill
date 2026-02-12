@@ -14,7 +14,7 @@ You’ll need Google Ads API access:
 - Login customer ID (and optional customer ID)
 
 **Where to put config:**
-- Prefer **env vars** (local only), or
+- Prefer **env vars** (local only) — see `.env.example`, or
 - A **local JSON file** you pass at runtime
 
 See `references/google_ads_setup.md` for exact fields + examples.
