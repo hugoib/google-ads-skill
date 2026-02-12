@@ -19,6 +19,14 @@ You’ll need Google Ads API access:
 
 See `references/google_ads_setup.md` for exact fields + examples.
 
+## Load this skill in OpenClaw
+1) Package the skill:
+```bash
+scripts/package_skill.py /path/to/google-ads-ops
+```
+2) Load the `.skill` file in OpenClaw (skills UI / CLI).
+3) Trigger by asking for: “audit Google Ads”, “optimize campaigns”, or “build a campaign”.
+
 ## Business profile
 Campaign builds use a business profile file (or Q&A prompt). Schema is in:
 - `references/business_profile.schema.md`
